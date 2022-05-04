@@ -1,6 +1,27 @@
 # Mssql Setup
 ### Install Mssql on Kubernetes using Helm
 
+Please clone this reposity 
+```sh
+http://172.20.105.100:7990/scm/trdis/mssql.git
+```
+Go to clone folder
+
+## Components included in chart template
+- charts  
+- Chart.yaml  
+- templates  
+  - _helpers.tpl
+  - deployment.yaml
+  - hpa.yaml
+  - ingress.yaml
+  - NOTES.txt
+  - service.yaml
+  - serviceaccount.yaml
+  - tests
+- values.yaml
+
+
 Run command to install the mssql database
 
 helm install mssql-latest-deploy . --set ACCEPT_EULA.value=Y --set MSSQL_PID.value=Developer
